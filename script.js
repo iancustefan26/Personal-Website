@@ -102,7 +102,4 @@ function loadAbout(){
 });
 }
 
-function loadSections(){
-  const x = updateActiveSection.activeSection
-}
-
+loadAbout();
