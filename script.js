@@ -15,6 +15,16 @@ new Typed("#hello-world", {
     loop: false
   });
 
+  function loadAbout(){
+    new Typed("#join-me", {
+      strings: ["print('My journey')", "Join me on my journey as I navigate the intricate world of computer science and celebrate the tapestry of interests that shape my identity."],
+      typeSpeed: 35,
+      backSpeed: 60,
+      backDelay: 1000,
+      loop: false
+  });
+  }
+
 // Get all navigation links
 const navLinks = document.querySelectorAll('.navbar a');
 
@@ -83,7 +93,9 @@ function updateActiveSection(){
      console.log(activeLink);
      activeLink.classList.add('active');
     if(activeLink.getAttribute('href') == '#about' && functionCalled == false){
-    loadAbout();
+      setTimeout(function() {
+        loadAbout();
+      }, 2300);
     functionCalled = true;
   }
   }
@@ -96,15 +108,6 @@ window.onload = () => {
 
 ///ABOUT SECTION!!!!
 //"print('My personality')", "Join me on my journey as I navigate the intricate world of computer science and celebrate the tapestry of interests that shape my identity."
-function loadAbout(){
-  new Typed("#join-me", {
-    strings: ["print('My journey')", "Join me on my journey as I navigate the intricate world of computer science and celebrate the tapestry of interests that shape my identity."],
-    typeSpeed: 35,
-    backSpeed: 60,
-    backDelay: 1000,
-    loop: false
-});
-}
 
 const aboutSection = document.getElementById("about");
 const container = aboutSection.querySelector(".container1");
