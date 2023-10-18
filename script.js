@@ -60,7 +60,7 @@ function getVisibleArea(element) {
   const visibleWidth = Math.min(rect.right, windowWidth) - Math.max(rect.left, 0);
   return visibleHeight * visibleWidth;
 }
-
+let functionCalled = false;
 const sections = document.querySelectorAll('section');
 const navA = document.querySelectorAll('.navbar a');
 
@@ -79,9 +79,14 @@ function updateActiveSection(){
     a.classList.remove('active');
   });
   const activeLink = document.querySelector(`.navbar a[href="#${activeSection}"]`);
-  if (activeLink) {
+  if (activeLink){
      console.log(activeLink);
-      activeLink.classList.add('active');
+     activeLink.classList.add('active');
+    if(activeLink.getAttribute('href') == '#about' && functionCalled == false){
+    loadAbout();
+    functionCalled = true;
+    console.log("sdadsadssadasdasdsadasdasdsa");
+  }
   }
 }
 
@@ -101,5 +106,3 @@ function loadAbout(){
     loop: false
 });
 }
-
-loadAbout();

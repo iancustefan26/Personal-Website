@@ -183,6 +183,7 @@ body{
     justify-content: space-between;
     display: flex;
     border-radius: 10%;
+    
 }
 .text{
     width: 700px;
