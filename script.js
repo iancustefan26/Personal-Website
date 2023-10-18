@@ -85,7 +85,6 @@ function updateActiveSection(){
     if(activeLink.getAttribute('href') == '#about' && functionCalled == false){
     loadAbout();
     functionCalled = true;
-    console.log("sdadsadssadasdasdsadasdasdsa");
   }
   }
 }
@@ -99,10 +98,34 @@ window.onload = () => {
 //"print('My personality')", "Join me on my journey as I navigate the intricate world of computer science and celebrate the tapestry of interests that shape my identity."
 function loadAbout(){
   new Typed("#join-me", {
-    strings: ["print('My personality')", "Join me on my journey as I navigate the intricate world of computer science and celebrate the tapestry of interests that shape my identity."],
+    strings: ["print('My journey')", "Join me on my journey as I navigate the intricate world of computer science and celebrate the tapestry of interests that shape my identity."],
     typeSpeed: 35,
     backSpeed: 60,
     backDelay: 1000,
     loop: false
 });
 }
+
+const aboutSection = document.getElementById("about");
+const container = aboutSection.querySelector(".container1");
+
+function startAnimation() {
+        void container.offsetWidth; // Trigger a reflow, allowing the animation to restart
+        container.style.animation = "slideTop 2s ease forwards"; // Start the animation
+    
+}
+
+function checkAnimationTrigger() {
+    const rect = aboutSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        startAnimation();
+    }
+    else{
+      container.style.animation = "none";
+    }
+}
+
+window.addEventListener("scroll", checkAnimationTrigger);
+window.addEventListener("resize", checkAnimationTrigger);
+
+checkAnimationTrigger();

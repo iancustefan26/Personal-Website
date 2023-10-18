@@ -7,7 +7,7 @@
 .home img{
     margin-bottom: 20%;
     margin-left: 35%;
-    border-radius: 30%;
+    border-radius: 40%;
     max-width: 350px;
     opacity: 0;
     animation: zoomIn 1s ease forwards;
@@ -183,6 +183,7 @@ body{
     justify-content: space-between;
     display: flex;
     border-radius: 10%;
+    animation: slideTop 2s ease forwards;
     
 }
 .text{
@@ -201,7 +202,7 @@ body{
 .text p{
     font-weight: 700;
     font-size: 20px;
-    color: aqua;
+    color: whitesmoke;
     font-family: 'Source Code Pro', monospace;
 }
 
