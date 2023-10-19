@@ -140,4 +140,45 @@ window.addEventListener("resize", checkAnimationTrigger);
 
 checkAnimationTrigger();
 
+///SKILLS Section
+
+const skillsSection = document.getElementById("skills");
+const skillImages = document.querySelectorAll(".skills-box img"); // Select all skill images
+const skillText = document.getElementById("skills-text");
+
+function startSkillsAnimation() {
+  skillImages.forEach((image, index) => {
+    image.style.animation = "slideTop 1s ease forwards";
+    image.style.animationDelay = `calc(0.2s * ${index + 1})`; // Set animation delay based on index
+  });
+}
+
+function startHoverAnimation(){
+  skillImages.forEach(image => {
+    image.style.animation = "hoverAnimation 5s ease-in-out infinite";
+  });
+}
+
+// Trigger the animation when the skills section is in view
+function checkSkillsSection() {
+  const skillsSectionRect = skillsSection.getBoundingClientRect();
+  if (skillsSectionRect.top < window.innerHeight && skillsSectionRect.bottom >= 0) {
+    startSkillsAnimation();
+    setTimeout(() => {
+      startHoverAnimation();
+    }, 2500);
+    ///remove the scroll event listener
+    window.removeEventListener("scroll", checkSkillsSection);
+  }
+  else{
+    skillImages.forEach(image =>{
+      image.style.animation = "none"
+      image.style.animationDelay = "none";
+      image.style.opacity = "0";
+    });
+  }
+}
+
+// Add a scroll event listener to check when the skills section is in view
+window.addEventListener("scroll", checkSkillsSection);
 
