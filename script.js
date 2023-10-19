@@ -145,6 +145,7 @@ checkAnimationTrigger();
 const skillsSection = document.getElementById("skills");
 const skillImages = document.querySelectorAll(".skills-box img"); // Select all skill images
 const skillText = document.getElementById("skills-text");
+const skillHead = document.querySelectorAll(".container2 h1");
 
 function startSkillsAnimation() {
   skillImages.forEach((image, index) => {
@@ -159,11 +160,18 @@ function startHoverAnimation(){
   });
 }
 
+function startTextAnimation(){
+  skillHead.forEach(title =>{
+    title.style.animation = "slideTop 3s ease forwards";
+  })
+}
+
 // Trigger the animation when the skills section is in view
 function checkSkillsSection() {
   const skillsSectionRect = skillsSection.getBoundingClientRect();
   if (skillsSectionRect.top < window.innerHeight && skillsSectionRect.bottom >= 0) {
     startSkillsAnimation();
+    startTextAnimation();
     setTimeout(() => {
       startHoverAnimation();
     }, 2500);

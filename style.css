@@ -231,7 +231,7 @@ body{
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 50px;
     color: greenyellow;
-    margin-left: 43%;
+    margin-left: 40%;
 }
 
 .skills-box{
@@ -246,6 +246,57 @@ body{
 
 .skills-box img{
     width: 100px;
+}
+
+.skill-description{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-weight: 700;
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+
+#html{
+    color: orangered;
+}
+
+#css{
+    color: rgb(54, 121, 245);
+}
+
+#js{
+    color: gold;
+}
+
+#cpp{
+    color: blue;
+}
+
+#python1{
+    color: blue;
+}
+#python2{
+    color: gold;
+}
+#git{
+    color: rgb(250, 67, 0);
+}
+#vue{
+    color: green;
+}
+
+.second{
+    width: 40%;
+}
+
+.first{
+    width: 40%;
 }
 
 
