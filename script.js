@@ -121,7 +121,7 @@ const container = aboutSection.querySelector(".container1");
 ///trigger animation about section
 function startAnimation() {
         void container.offsetWidth; // Trigger a reflow, allowing the animation to restart
-        container.style.animation = "slideTop 2s ease forwards"; // Start the animation
+        container.style.animation = "slideTop 3.5s ease forwards"; // Start the animation
     
 }
 
@@ -143,50 +143,63 @@ checkAnimationTrigger();
 ///SKILLS Section
 
 const skillsSection = document.getElementById("skills");
-const skillImages = document.querySelectorAll(".skills-box img"); // Select all skill images
-const skillText = document.getElementById("skills-text");
+const skillImages = document.querySelectorAll(".skills-box img");
 const skillHead = document.querySelectorAll(".container2 h1");
+const skillPhar = document.querySelectorAll(".skill-description a");
+
+// Initialize a flag to track if animations have been triggered
+let animatedSkill = false;
 
 function startSkillsAnimation() {
+
   skillImages.forEach((image, index) => {
     image.style.animation = "slideTop 1s ease forwards";
-    image.style.animationDelay = `calc(0.2s * ${index + 1})`; // Set animation delay based on index
+    image.style.animationDelay = `calc(0.3s * ${index + 1})`; // Set animation delay based on index
+  });
+  skillHead.forEach(title => {
+    title.style.animation = "slideTop 3s ease forwards";
+  });
+  skillPhar.forEach(phar => {
+    phar.style.animation = "slideBottom 3s ease forwards";
   });
 }
 
-function startHoverAnimation(){
+function startHoverAnimation() {
   skillImages.forEach(image => {
     image.style.animation = "hoverAnimation 5s ease-in-out infinite";
   });
-}
-
-function startTextAnimation(){
-  skillHead.forEach(title =>{
-    title.style.animation = "slideTop 3s ease forwards";
-  })
 }
 
 // Trigger the animation when the skills section is in view
 function checkSkillsSection() {
   const skillsSectionRect = skillsSection.getBoundingClientRect();
   if (skillsSectionRect.top < window.innerHeight && skillsSectionRect.bottom >= 0) {
-    startSkillsAnimation();
-    startTextAnimation();
-    setTimeout(() => {
-      startHoverAnimation();
-    }, 2500);
-    ///remove the scroll event listener
-    window.removeEventListener("scroll", checkSkillsSection);
-  }
-  else{
-    skillImages.forEach(image =>{
-      image.style.animation = "none"
-      image.style.animationDelay = "none";
-      image.style.opacity = "0";
-    });
-  }
+    if (!animatedSkill) {
+      startSkillsAnimation();
+      setTimeout(() => {
+        startHoverAnimation();
+      }, 2700);
+      animatedSkill = true; // Set the flag to true
+    }
+  } else {
+      skillImages.forEach(image => {
+        image.style.animation = "none";
+        image.style.animationDelay = "none";
+        image.style.opacity = "0";
+      });
+      skillHead.forEach(title => {
+        title.style.animation = "none";
+        title.style.opacity = "0";
+      });
+      skillPhar.forEach(phar =>{
+        phar.style.animation = "none";
+        phar.style.opacity = "0";
+      });
+      animatedSkill = false; // Reset the flag to false
+    }
 }
 
 // Add a scroll event listener to check when the skills section is in view
 window.addEventListener("scroll", checkSkillsSection);
+
 
