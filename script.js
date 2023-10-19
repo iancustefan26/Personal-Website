@@ -14,7 +14,13 @@ new Typed("#hello-world", {
     backDelay: 1000,
     loop: false
   });
-
+  new Typed("#skills-text", {
+    strings: [".Skills();", ".Abilities();", ".Talents();", ".Proficiencies();"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+  });
   function loadAbout(){
     new Typed("#join-me", {
       strings: ["print('My journey')", "Join me on my journey as I navigate the intricate world of computer science and celebrate the tapestry of interests that shape my identity."],
@@ -112,6 +118,7 @@ window.onload = () => {
 const aboutSection = document.getElementById("about");
 const container = aboutSection.querySelector(".container1");
 
+///trigger animation about section
 function startAnimation() {
         void container.offsetWidth; // Trigger a reflow, allowing the animation to restart
         container.style.animation = "slideTop 2s ease forwards"; // Start the animation
@@ -132,3 +139,5 @@ window.addEventListener("scroll", checkAnimationTrigger);
 window.addEventListener("resize", checkAnimationTrigger);
 
 checkAnimationTrigger();
+
+
