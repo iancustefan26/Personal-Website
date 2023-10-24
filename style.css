@@ -226,13 +226,13 @@ body{
     height: 50vh;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .container2 h1{
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 50px;
     color: greenyellow;
-    margin-left: 40%;
 }
 
 .skills-box{

@@ -31,6 +31,13 @@ new Typed("#hello-world", {
   });
   }
 
+  new Typed(".title_project", {
+    strings: [".Projects();", ".Work();", ".Portfolio();"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+  });
 // Get all navigation links
 const navLinks = document.querySelectorAll('.navbar a');
 
@@ -96,7 +103,7 @@ function updateActiveSection(){
   });
   const activeLink = document.querySelector(`.navbar a[href="#${activeSection}"]`);
   if (activeLink){
-     console.log(activeLink);
+     //console.log(activeLink);
      activeLink.classList.add('active');
     if(activeLink.getAttribute('href') == '#about' && functionCalled == false){
       setTimeout(function() {
@@ -202,4 +209,38 @@ function checkSkillsSection() {
 // Add a scroll event listener to check when the skills section is in view
 window.addEventListener("scroll", checkSkillsSection);
 
+///PORTFOLIO SECTION
 
+let headTrigger = false;
+const projectHead = document.querySelectorAll(".portfolio h1");
+const portfolioSection = document.querySelector(".portfolio");
+let animationRunning = false;
+
+function animatePortfolio() {
+  if (!animationRunning) {
+    projectHead.forEach(title => {
+      title.style.animation = "slideTop 3s ease forwards";
+    });
+    animationRunning = true;
+  }
+}
+
+function checkAnimationTriggerPortfolio() {
+  const rect = portfolioSection.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    if (!headTrigger) {
+      animatePortfolio();
+      headTrigger = true;
+    }
+  } else {
+    headTrigger = false;
+    // Reset animationRunning when the section is out of view
+    animationRunning = false;
+    projectHead.forEach(title => {
+      title.style.animation = "none";
+      title.style.opacity = "0";
+    });
+  }
+}
+
+window.addEventListener("scroll", checkAnimationTriggerPortfolio);
