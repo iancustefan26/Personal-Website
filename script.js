@@ -244,3 +244,240 @@ function checkAnimationTriggerPortfolio() {
 }
 
 window.addEventListener("scroll", checkAnimationTriggerPortfolio);
+
+let Project1Trigger = false;
+const project1Head = document.querySelectorAll(".project1 h2");
+const project1Photo = document.querySelectorAll(".project1 img");
+const project1Text = document.querySelectorAll(".project1 p");
+const project1As = document.querySelectorAll(".project1 a");
+const project1Section = document.querySelector(".project1");
+animationRunning = false;
+let animationTriggered = false;
+
+function animateProject1(){
+  if(!animationRunning){
+    animationRunning = true;
+    project1Head.forEach(title =>{
+      title.style.animation = "slideTop 3s ease forwards";
+    });
+    project1Photo.forEach(image =>{
+      image.style.animation = "slideRight 3s ease forwards";
+    });
+    project1Text.forEach(phar =>{
+      phar.style.animation = "slideLeft 3s ease forwards";
+    });
+    project1As.forEach(as =>{
+      as.style.animation = "slideBottom 3s ease forwards";
+    });
+  }
+}
+
+function checkAnimationTriggerProject1(){
+  const rect = project1Section.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    if (!animationTriggered){
+      animationTriggered = true;
+      animateProject1();
+    }
+  } else {
+    animationTriggered = false;
+    // Reset animationRunning when the section is out of view
+    animationRunning = false;
+    project1Head.forEach(title =>{
+      title.style.animation = "none";
+      title.style.opacity = "0";
+    });
+    project1Photo.forEach(image =>{
+      image.style.opacity = "0";
+      image.style.animation = "none";
+    });
+    project1Text.forEach(phar =>{
+      phar.style.opacity = "0";
+      phar.style.animation = "none";
+    });
+    project1As.forEach(as =>{
+      as.style.opacity = "0";
+      as.style.animation = "none";
+    });
+  } 
+}
+
+window.addEventListener('scroll', checkAnimationTriggerProject1);
+
+let Project2Trigger = false;
+const project2Head = document.querySelectorAll(".project2 h2");
+const project2Photo = document.querySelectorAll(".project2 img");
+const project2Text = document.querySelectorAll(".project2 p");
+const project2As = document.querySelectorAll(".project2 a");
+const project2Section = document.querySelector(".project2");
+animationRunning = false;
+animationTriggered = false;
+
+function animateProject2(){
+  if(!animationRunning){
+    animationRunning = true;
+    project2Head.forEach(title =>{
+      title.style.animation = "slideTop 3s ease forwards";
+    });
+    project2Photo.forEach(image =>{
+      image.style.animation = "slideRight 3s ease forwards";
+    });
+    project2Text.forEach(phar =>{
+      phar.style.animation = "slideLeft 3s ease forwards";
+    });
+    project2As.forEach(as =>{
+      as.style.animation = "slideBottom 3s ease forwards";
+    });
+  }
+}
+
+function checkAnimationTriggerProject2(){
+  const rect = project2Section.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    if (!animationTriggered){
+      animationTriggered = true;
+      animateProject2();
+    }
+  } else {
+    animationTriggered = false;
+    // Reset animationRunning when the section is out of view
+    animationRunning = false;
+    project2Head.forEach(title =>{
+      title.style.animation = "none";
+      title.style.opacity = "0";
+    });
+    project2Photo.forEach(image =>{
+      image.style.opacity = "0";
+      image.style.animation = "none";
+    });
+    project2Text.forEach(phar =>{
+      phar.style.opacity = "0";
+      phar.style.animation = "none";
+    });
+    project2As.forEach(as =>{
+      as.style.opacity = "0";
+      as.style.animation = "none";
+    });
+  } 
+}
+
+window.addEventListener('scroll', checkAnimationTriggerProject2);
+
+let Project3Trigger = false;
+const project3Head = document.querySelectorAll(".project3 h2");
+const project3Photo = document.querySelectorAll(".project3 img");
+const project3Text = document.querySelectorAll(".project3 p");
+const project3As = document.querySelectorAll(".project3 a");
+const project3Section = document.querySelector(".project3");
+animationRunning = false;
+animationTriggered = false;
+
+function animateProject3(){
+  if(!animationRunning){
+    animationRunning = true;
+    project3Head.forEach(title =>{
+      title.style.animation = "slideTop 3s ease forwards";
+    });
+    project3Photo.forEach(image =>{
+      image.style.animation = "slideRight 3s ease forwards";
+    });
+    project3Text.forEach(phar =>{
+      phar.style.animation = "slideLeft 3s ease forwards";
+    });
+    project3As.forEach(as =>{
+      as.style.animation = "slideBottom 3s ease forwards";
+    });
+  }
+}
+
+function checkAnimationTriggerProject3(){
+  const rect = project3Section.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    if (!animationTriggered){
+      animationTriggered = true;
+      animateProject3();
+    }
+  } else {
+    animationTriggered = false;
+    // Reset animationRunning when the section is out of view
+    animationRunning = false;
+    project3Head.forEach(title =>{
+      title.style.animation = "none";
+      title.style.opacity = "0";
+    });
+    project3Photo.forEach(image =>{
+      image.style.opacity = "0";
+      image.style.animation = "none";
+    });
+    project3Text.forEach(phar =>{
+      phar.style.opacity = "0";
+      phar.style.animation = "none";
+    });
+    project3As.forEach(as =>{
+      as.style.opacity = "0";
+      as.style.animation = "none";
+    });
+  } 
+}
+
+window.addEventListener('scroll', checkAnimationTriggerProject3);
+
+
+let Project4Trigger = false;
+const project4Head = document.querySelectorAll(".project4 h2");
+const project4Photo = document.querySelectorAll(".project4 img");
+const project4Text = document.querySelectorAll(".project4 p");
+const project4As = document.querySelectorAll(".project4 a");
+const project4Section = document.querySelector(".project4");
+animationRunning = false;
+animationTriggered = false;
+
+function animateProject4(){
+  if(!animationRunning){
+    animationRunning = true;
+    project4Head.forEach(title =>{
+      title.style.animation = "slideTop 3s ease forwards";
+    });
+    project4Photo.forEach(image =>{
+      image.style.animation = "slideRight 3s ease forwards";
+    });
+    project4Text.forEach(phar =>{
+      phar.style.animation = "slideLeft 3s ease forwards";
+    });
+    project4As.forEach(as =>{
+      as.style.animation = "slideBottom 3s ease forwards";
+    });
+  }
+}
+
+function checkAnimationTriggerProject4(){
+  const rect = project4Section.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    if (!animationTriggered){
+      animationTriggered = true;
+      animateProject4();
+    }
+  } else {
+    animationTriggered = false;
+    // Reset animationRunning when the section is out of view
+    animationRunning = false;
+    project4Head.forEach(title =>{
+      title.style.animation = "none";
+      title.style.opacity = "0";
+    });
+    project4Photo.forEach(image =>{
+      image.style.opacity = "0";
+      image.style.animation = "none";
+    });
+    project4Text.forEach(phar =>{
+      phar.style.opacity = "0";
+      phar.style.animation = "none";
+    });
+    project4As.forEach(as =>{
+      as.style.opacity = "0";
+      as.style.animation = "none";
+    });
+  } 
+}
+
+window.addEventListener('scroll', checkAnimationTriggerProject4);
