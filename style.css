@@ -178,7 +178,7 @@ body{
 .container1{
     margin-top: 300px;
     width: 100%;
-    height: 800px;
+    height: 70vh;
     align-items: center;
     justify-content: space-between;
     display: flex;
@@ -196,14 +196,14 @@ body{
     font-weight: 700;
     font-size: 50px;
     color: aliceblue;
-    font-family: 'Young Serif', serif;
+    font-family: 'Tilt Neon', sans-serif;
 }
 
 .text p{
     font-weight: 700;
     font-size: 20px;
     color: whitesmoke;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Raleway', sans-serif;
 }
 
 .text span{
@@ -258,7 +258,7 @@ body{
     font-weight: 700;
     font-size: 20px;
     color: whitesmoke;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -328,7 +328,7 @@ body{
 
 .portfolio h2{
     margin-bottom: 6%;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
     font-weight: 600;
 }
@@ -369,7 +369,7 @@ body{
 }
 
 .project-description{
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
@@ -380,6 +380,7 @@ body{
     width: 100%;
     height: 65vh;
     align-items: center;
+    margin-bottom: 10%;
 }
 
 .contact-block{
@@ -412,11 +413,6 @@ body{
     border-bottom: 1px solid grey;
 }
 
-.popup-block{
-    display: flex;
-    flex-direction: column;
-}
-
 .popup-block a{
     margin-left: 20%;
     display: flex;
@@ -429,8 +425,57 @@ body{
     border-radius: 10%;
 }
 
-input:focus, textarea:focus {
+textarea{
+    resize: none;
+}
+
+.input-text::placeholder{
+    transition: 0.5s;
+}
+
+.input-text{
+    transition: 0.5s;
+}
+
+.input-text:focus{
     outline: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.input-text:focus::placeholder{
+    color: aqua;
+    transform: translateX(20px);
+    transform: translateY(-7px);
+    font-size: 23px;
+    font-weight: 700;
+}  
+
+.container4 a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 200px;
+    margin-bottom: 40px;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideBottomBig 1.2s ease forwards;
+    animation-delay: calc(0.39s * var(--i));
+}
+
+.container4 a:hover{
+    background: aqua;
+    color: grey;
+    box-shadow: 0 0 20px aqua;
 }
 
 .button-19 {
