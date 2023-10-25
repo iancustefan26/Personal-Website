@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lato&family=Pixelify+Sans:wght@500&family=Source+Code+Pro&family=Tilt+Neon&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lato&family=Outfit:wght@200&family=Pixelify+Sans:wght@500&family=Raleway&family=Source+Code+Pro&family=Tilt+Neon&family=Young+Serif&display=swap');
 .logo{
     width: 100%;
     opacity: 0;
@@ -308,14 +308,15 @@ body{
 
 .portfolio div{
     max-width: 100%;
-    width: 70%;
+    width: 55%;
     height: auto;
-    margin-top: 15%;
+    margin-top: 2%;
     display: inline-block;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+
 
 .portfolio h1{
     font-family: 'Pixelify Sans', sans-serif;
@@ -328,19 +329,19 @@ body{
 .portfolio h2{
     margin-bottom: 6%;
     font-family: 'Source Code Pro', monospace;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
 }
 
 .portfolio a{ 
     margin-top: 5%;
     display: inline-flex;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: transparent;
     border: 2px solid aqua;
     border-radius: 50%;
-    font-size: 30px;
+    font-size: 23px;
     color: aqua;
     text-decoration: none;
     justify-content: center;
@@ -355,7 +356,7 @@ body{
 
 .portfolio img{
     max-width: 70%;
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 16%;
     border: 1px solid aqua;
@@ -369,16 +370,132 @@ body{
 
 .project-description{
     font-family: 'Source Code Pro', monospace;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .container4{
-    margin-top: 700px;
-    width: 200px;
-    height: 200px;
-    border: 2px solid aqua;
-    margin-bottom: 700px;
+    margin-top: 25%;
+    display: flex;
+    width: 100%;
+    height: 65vh;
+    align-items: center;
+}
+
+.contact-block{
+    width: 90%;
+    height: 65vh;
+    margin: 0 auto;
+}
+
+.contact-block h2{
+    font-weight: 700;
+    font-family: 'Tilt Neon', sans-serif;
+    color: #fff;
+    font-size: 40px;
+}
+
+.contact-block textarea{
+    height: 30vh;
+}
+
+.input-text{
+    font-family: 'Raleway', sans-serif;
+    background: transparent;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid grey;
+}
+
+.popup-block{
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-block a{
+    margin-left: 20%;
+    display: flex;
+}
+
+.popup-block img{
+    width: 80%;
+    margin-left: 15%;
+    height: auto;
+    border-radius: 10%;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
 }
 
 /*ANIMATION*/
