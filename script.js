@@ -481,3 +481,35 @@ function checkAnimationTriggerProject4(){
 }
 
 window.addEventListener('scroll', checkAnimationTriggerProject4);
+
+
+///CONTACT SECTION
+let trigger = false;
+
+function animateContactSection() {
+  const contactImages = document.querySelectorAll(".popup-image");
+  const contactForms = document.querySelectorAll(".contact-block");
+  const contactSection = document.querySelector(".contact");
+  const contactAs = document.querySelectorAll(".contact a");
+  const rect = contactSection.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight && rect.bottom >= 0 && !trigger) {
+    for (const contactImage of contactImages) {
+      contactImage.style.animation = "slideTop 3s ease forwards";
+      contactImage.style.opacity = "1";
+    }
+    for (const contactForm of contactForms) {
+      contactForm.style.animation = "slideRight 3s ease forwards";
+      contactForm.style.opacity = "1";
+    }
+    for(const contactA of contactAs){
+      contactA.style.animation = "slideLeft 3s ease forwards";
+    }
+    trigger = true;
+  }
+}
+
+window.addEventListener("scroll", animateContactSection);
+
+
+
