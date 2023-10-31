@@ -7,8 +7,8 @@
 .home img{
     margin-bottom: 20%;
     margin-left: 35%;
-    border-radius: 40%;
-    max-width: 350px;
+    border-radius: 20%;
+    max-width: 60%;
     opacity: 0;
     animation: zoomIn 1s ease forwards;
     animation-delay: 2s;
@@ -100,7 +100,7 @@
 
 
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.png');
     background-size: 100%;
     background-attachment: fixed;
     font-family: 'Lato', sans-serif;
@@ -288,8 +288,8 @@ body{
 #git{
     color: rgb(250, 67, 0);
 }
-#vue{
-    color: green;
+#react{
+    color: rgb(32, 70, 206);
 }
 
 .second{

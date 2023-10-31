@@ -125,6 +125,8 @@ window.onload = () => {
 const aboutSection = document.getElementById("about");
 const container = aboutSection.querySelector(".container1");
 
+container.style.animation = "none";
+container.style.opacity = '0';
 ///trigger animation about section
 function startAnimation() {
         void container.offsetWidth; // Trigger a reflow, allowing the animation to restart
@@ -136,9 +138,6 @@ function checkAnimationTrigger() {
     const rect = aboutSection.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom >= 0) {
         startAnimation();
-    }
-    else{
-      container.style.animation = "none";
     }
 }
 
@@ -177,6 +176,20 @@ function startHoverAnimation() {
   });
 }
 
+skillImages.forEach(image => {
+  image.style.animation = "none";
+  image.style.animationDelay = "none";
+  image.style.opacity = "0";
+});
+skillHead.forEach(title => {
+  title.style.animation = "none";
+  title.style.opacity = "0";
+});
+skillPhar.forEach(phar =>{
+  phar.style.animation = "none";
+  phar.style.opacity = "0";
+});
+
 // Trigger the animation when the skills section is in view
 function checkSkillsSection() {
   const skillsSectionRect = skillsSection.getBoundingClientRect();
@@ -187,23 +200,9 @@ function checkSkillsSection() {
         startHoverAnimation();
       }, 2700);
       animatedSkill = true; // Set the flag to true
+      
     }
-  } else {
-      skillImages.forEach(image => {
-        image.style.animation = "none";
-        image.style.animationDelay = "none";
-        image.style.opacity = "0";
-      });
-      skillHead.forEach(title => {
-        title.style.animation = "none";
-        title.style.opacity = "0";
-      });
-      skillPhar.forEach(phar =>{
-        phar.style.animation = "none";
-        phar.style.opacity = "0";
-      });
-      animatedSkill = false; // Reset the flag to false
-    }
+  }
 }
 
 // Add a scroll event listener to check when the skills section is in view
@@ -225,6 +224,11 @@ function animatePortfolio() {
   }
 }
 
+projectHead.forEach(title => {
+      title.style.animation = "none";
+      title.style.opacity = "0";
+    });
+
 function checkAnimationTriggerPortfolio() {
   const rect = portfolioSection.getBoundingClientRect();
   if (rect.top < window.innerHeight && rect.bottom >= 0) {
@@ -232,14 +236,6 @@ function checkAnimationTriggerPortfolio() {
       animatePortfolio();
       headTrigger = true;
     }
-  } else {
-    headTrigger = false;
-    // Reset animationRunning when the section is out of view
-    animationRunning = false;
-    projectHead.forEach(title => {
-      title.style.animation = "none";
-      title.style.opacity = "0";
-    });
   }
 }
 
@@ -506,6 +502,7 @@ function animateContactSection() {
       contactA.style.animation = "slideLeft 3s ease forwards";
     }
     trigger = true;
+    
   }
 }
 
