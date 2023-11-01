@@ -125,16 +125,16 @@
                 </div>
                 <div class="contact-block">
                     <h2>Say Hello!👋</h2>
-                    <form method = "post" class = "contact-form">
+                    <form method = "post" class = "contact-form" id = "myForm">
                         <label for = "name"></label>
-                        <input type = "text" class = "input-text" placeholder="Your name: " required = "required" id = "name">
+                        <input type = "text" name = "name" class = "input-text" placeholder="Your name: " required = "required" id = "name">
                         <br>
                         <label for ="email"></label>
-                        <input type = "email" class = "input-text" placeholder="Your e-mail: " required = "required" id = "email">
+                        <input type = "email" name = "email" class = "input-text" placeholder="Your e-mail: " required = "required" id = "email">
                         <br>
                         <label for = "message"></label>
-                        <textarea class = "input-text" placeholder="Your thoughts: " required = "required" id ="message"></textarea>
-                        <button class="button-19" role="button" value = "send">Send Message</button>
+                        <textarea class = "input-text" type = "text" name = "message" placeholder="Your thoughts: " required = "required" id ="message"></textarea>
+                        <button class="button-19" role="button" type = "submit" id = "submitButton">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -142,4 +142,13 @@
     </body>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script src = "script.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("2D6gQg6fheF01hEhW");
+   })();
+</script>
+<script src = "formScript.js"></script>
 </html>

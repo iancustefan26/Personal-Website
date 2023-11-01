@@ -1,48 +1,30 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
+formButton = document.getElementById('submitButton');
 
-const app = express();
+formButton.addEventListener('click', function(e){
+    e.preventDefault();
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
 
-app.use(express.urlencoded({ extended: true }));
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const message = messageInput.value;
 
-app.use(express.static('public',
- {'extensions': ['html', 'css', 'js']}
- ));
- 
-app.use(express.static('public/images', {extensions: ['png']}));
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
-
-app.post('/send', (req, res) => { // Corectăm ruta pentru cererile POST
-    const { name, email, message } = req.body;
-    const transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: 'iancustefanteodor@gmail.com',
-            pass: 'Agripina26@26',
-        },
-    });
-
-    const mailOptions = {
-        from: email,
-        to: transporter.auth.user,
-        subject: `New message from ${name}`,
-        text: `Name: ${name}\nE-mail: ${email}\nMessage: ${message}`,
+    var templateParams = {
+        user_name: name,
+        user_email: email,
+        message: message
     };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            res.send('Message not sent, there was a problem!');
-        } else {
-            console.log('Email sent!' + info.response);
-            res.send('Message sent successfully!');
-        }
-    });
-});
-
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+     
+    emailjs.send('service_sc4gm47', 'template_ubfch6p', templateParams)
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+           alert('Message was sent successfully!');
+           nameInput.value = '';
+           emailInput.value = '';
+           messageInput.value = '';
+        }, function(error) {
+           console.log('FAILED...', error);
+           alert('There was an error sending your message!' + error);
+        });
 });
