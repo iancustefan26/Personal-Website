@@ -98,6 +98,10 @@
     text-shadow: 0 0 30px aqua;
 }
 
+.logo :hover{
+    cursor: pointer;
+}
+
 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.png');
@@ -108,7 +112,7 @@ body{
 }
 
 .logo img{
-    width: 180px;
+    width: 23%;
 }
 
 .navbar{

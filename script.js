@@ -510,3 +510,15 @@ window.addEventListener("scroll", animateContactSection);
 
 
 
+///HOME LOGO
+
+function scrollToTop(){
+  window.scrollTo({
+    top: 0, 
+    behavior: 'smooth'
+  });
+}
+
+const logoButton = document.getElementById('logo');
+
+logoButton.addEventListener('click', scrollToTop);
