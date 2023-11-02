@@ -314,11 +314,15 @@ body{
     max-width: 100%;
     width: 55%;
     height: auto;
-    margin-top: 2%;
+    margin-top: 10%;
     display: inline-block;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.portfolio .project1{
+    margin-top: -20px;
 }
 
 

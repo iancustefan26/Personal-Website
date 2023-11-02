@@ -250,6 +250,8 @@ const project1Section = document.querySelector(".project1");
 animationRunning = false;
 let animationTriggered = false;
 
+let x = false;
+
 function animateProject1(){
   if(!animationRunning){
     animationRunning = true;
@@ -268,33 +270,35 @@ function animateProject1(){
   }
 }
 
+project1Head.forEach(title =>{
+  title.style.animation = "none";
+  title.style.opacity = "0";
+});
+project1Photo.forEach(image =>{
+  image.style.opacity = "0";
+  image.style.animation = "none";
+});
+project1Text.forEach(phar =>{
+  phar.style.opacity = "0";
+  phar.style.animation = "none";
+});
+project1As.forEach(as =>{
+  as.style.opacity = "0";
+  as.style.animation = "none";
+});
+
 function checkAnimationTriggerProject1(){
   const rect = project1Section.getBoundingClientRect();
   if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    if (!animationTriggered){
+    if (!animationTriggered && !x){
       animationTriggered = true;
+      x = true;
       animateProject1();
     }
   } else {
     animationTriggered = false;
     // Reset animationRunning when the section is out of view
     animationRunning = false;
-    project1Head.forEach(title =>{
-      title.style.animation = "none";
-      title.style.opacity = "0";
-    });
-    project1Photo.forEach(image =>{
-      image.style.opacity = "0";
-      image.style.animation = "none";
-    });
-    project1Text.forEach(phar =>{
-      phar.style.opacity = "0";
-      phar.style.animation = "none";
-    });
-    project1As.forEach(as =>{
-      as.style.opacity = "0";
-      as.style.animation = "none";
-    });
   } 
 }
 
@@ -308,6 +312,8 @@ const project2As = document.querySelectorAll(".project2 a");
 const project2Section = document.querySelector(".project2");
 animationRunning = false;
 animationTriggered = false;
+
+x = false;
 
 function animateProject2(){
   if(!animationRunning){
@@ -333,6 +339,7 @@ function checkAnimationTriggerProject2(){
     if (!animationTriggered){
       animationTriggered = true;
       animateProject2();
+      window.removeEventListener('scroll', checkAnimationTriggerProject2);
     }
   } else {
     animationTriggered = false;
@@ -392,6 +399,7 @@ function checkAnimationTriggerProject3(){
     if (!animationTriggered){
       animationTriggered = true;
       animateProject3();
+      window.removeEventListener('scroll', checkAnimationTriggerProject3);
     }
   } else {
     animationTriggered = false;
@@ -452,6 +460,7 @@ function checkAnimationTriggerProject4(){
     if (!animationTriggered){
       animationTriggered = true;
       animateProject4();
+      window.removeEventListener('scroll', checkAnimationTriggerProject3);
     }
   } else {
     animationTriggered = false;
