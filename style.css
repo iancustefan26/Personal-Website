@@ -79,6 +79,10 @@
 
 }
 
+#menu{
+    display: none;
+}
+
 .navbar a{
     display: inline-block;
     font-size: 25px;
@@ -669,24 +673,32 @@ textarea{
         position: absolute;
     }
     #menu{
+        display: block;
         position: absolute;
         cursor: pointer;
         right: 20px;
         top: 20px;
     }
+
     .header{
-        background-color: rgba(2, 2, 77, 0.78);
+        /*background-color: rgba(2, 2, 77, 0.78);*/
         position: sticky;
         left: 0;
         top: 0;
         border-radius: 30px;
-        width: 300px;
-        backdrop-filter: blur(8px);
+        width: 82%;
+        /*backdrop-filter: blur(8px);*/
+        display: block;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+        animation: slideBottom 1s ease forwards;
     }
     .navbar a{
         margin-top: 50px;
-        margin-left: 110px;
-        display: block;
+        margin-left: 36%;
+        display: none;
+        /*display: block;*/
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -695,5 +707,15 @@ textarea{
     }
     .about img{
         width: 200px;
+    }
+    .container4{
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .container4 a{
+        margin-left: 22%;
     }
 }

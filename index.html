@@ -11,10 +11,11 @@
     <title>Personal Website</title>
 </head>
     <body>
-        <header class = "header">
+        <header class = "header" id = "header">
             <a class = "logo" id = "logo">
                 <img src = "images/logo.png">
             </a>
+            <img src="/images/navbar-menu.png" id = "menu">
             <nav class = "navbar">
                 <a href = "#home" style = "--i:1;" class = "active">Home</a>
                 <a href = "#about" style = "--i:2;">About</a>
@@ -22,7 +23,6 @@
                 <a href = "#portfolio" style = "--i:4;">Portfolio</a>
                 <a href = "#contact" style = "--i:5;">Contact</a>
             </nav>
-                <img src="/images/navbar-menu.png" id = "menu">
         </header>
         <section class = "home" id = "home">
             <div class = "home-content">
@@ -39,7 +39,7 @@
                 </div>
                 <a href="/Users/stefaniancu/Documents/VS Code/iancustefanteodor.com/files/CV-Iancu Stefan-Teodor.pdf" download = "CV-Iancu Stefan-Teodor.pdf" class="btn">Download CV</a>
             </div>
-            <div class="home-image">
+            <div class="home-image" id = "home-image">
                 <img src = "images/memoji.png">
             </div>
         </section>
@@ -151,5 +151,6 @@
       emailjs.init("2D6gQg6fheF01hEhW");
    })();
 </script>
+<script src = "menuScript.js"></script>
 <script src = "formScript.js"></script>
 </html>
