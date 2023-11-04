@@ -85,7 +85,7 @@
     color: whitesmoke;
     text-decoration: none;
     font-weight: 600;
-    margin-left: 35px;
+    margin-left: 30px;
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
@@ -119,6 +119,10 @@ body{
     width: 100%;
     top: 0;
     right: 0
+}
+
+.navbar img{
+    display: none;
 }
 
 .social-media a{
@@ -630,5 +634,66 @@ textarea{
     100% {
       transform: translateY(0) scale(1.0);
       opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .logo img{
+        width: 100px;
+    }
+    .home-content p{
+        font-size: 15px;
+    }
+    .home-content h1{
+        font-size: 30px;
+    }
+    .home-content h3{
+        font-size: 25px;
+    }
+    .home{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home img{
+        margin-left: 5%;
+    }
+    .header{
+        position: sticky;
+    }
+    .logo{
+        top: 20px;
+        left: 20px;
+        position: absolute;
+    }
+    #menu{
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+        top: 20px;
+    }
+    .header{
+        background-color: rgba(2, 2, 77, 0.78);
+        position: sticky;
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+        width: 300px;
+        backdrop-filter: blur(8px);
+    }
+    .navbar a{
+        margin-top: 50px;
+        margin-left: 110px;
+        display: block;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+    }
+    .about img{
+        width: 200px;
     }
 }
