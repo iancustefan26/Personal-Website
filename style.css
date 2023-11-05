@@ -563,6 +563,14 @@ textarea{
   background: none;
 }
 
+.copyright{
+    font-size: 11px;
+    color: rgb(184, 230, 211);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 50px;
+}
+
 /*ANIMATION*/
 @keyframes slideRight{
     0%{
@@ -729,6 +737,7 @@ textarea{
         align-items: center;
         justify-content: center;
         text-align: center;
+        margin-bottom: 170px;
     }
     .container4 a{
         margin-left: 15%;
@@ -824,5 +833,7 @@ textarea{
         margin-bottom: 200px;
     }
 
-    
+    .copyright{
+        margin-top: 200px;
+    }
 }
