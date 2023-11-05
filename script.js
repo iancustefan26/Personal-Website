@@ -454,6 +454,23 @@ function animateProject4(){
   }
 }
 
+project4Head.forEach(title =>{
+  title.style.animation = "none";
+  title.style.opacity = "0";
+});
+project4Photo.forEach(image =>{
+  image.style.opacity = "0";
+  image.style.animation = "none";
+});
+project4Text.forEach(phar =>{
+  phar.style.opacity = "0";
+  phar.style.animation = "none";
+});
+project4As.forEach(as =>{
+  as.style.opacity = "0";
+  as.style.animation = "none";
+});
+
 function checkAnimationTriggerProject4(){
   const rect = project4Section.getBoundingClientRect();
   if (rect.top < window.innerHeight && rect.bottom >= 0) {
@@ -462,27 +479,7 @@ function checkAnimationTriggerProject4(){
       animateProject4();
       window.removeEventListener('scroll', checkAnimationTriggerProject3);
     }
-  } else {
-    animationTriggered = false;
-    // Reset animationRunning when the section is out of view
-    animationRunning = false;
-    project4Head.forEach(title =>{
-      title.style.animation = "none";
-      title.style.opacity = "0";
-    });
-    project4Photo.forEach(image =>{
-      image.style.opacity = "0";
-      image.style.animation = "none";
-    });
-    project4Text.forEach(phar =>{
-      phar.style.opacity = "0";
-      phar.style.animation = "none";
-    });
-    project4As.forEach(as =>{
-      as.style.opacity = "0";
-      as.style.animation = "none";
-    });
-  } 
+  }
 }
 
 window.addEventListener('scroll', checkAnimationTriggerProject4);
