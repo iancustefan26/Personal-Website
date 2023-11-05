@@ -109,7 +109,10 @@
 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.png');
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-attachment: scroll;
     background-attachment: fixed;
     font-family: 'Lato', sans-serif;
     color: whitesmoke;
@@ -223,7 +226,7 @@ body{
 }
 
 .about img{
-    width: 450px;
+    width: 35%;
     border-radius: 20%;
     right: 20px;
     margin-top: 50px;
@@ -231,7 +234,7 @@ body{
 }
 
 .container2{
-    margin-bottom: 550px;
+    margin-bottom: 300px;
     margin-top: 600px;
     left: 0;
     width: 100%;
@@ -349,7 +352,8 @@ body{
     font-weight: 600;
 }
 
-.portfolio a{ 
+.portfolio a{
+    cursor: pointer;
     margin-top: 5%;
     display: inline-flex;
     width: 50px;
@@ -645,6 +649,9 @@ textarea{
     body{
         align-items: center;
         justify-content: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background-mobile.jpg');
+        background-size: auto;
+        background-repeat: repeat;
     }
     .logo img{
         width: 100px;
@@ -774,7 +781,7 @@ textarea{
     }
 
     .container2 h1{
-        font-size: 40px;
+        font-size: 33px;
     }
 
     .skills-box{
@@ -782,7 +789,7 @@ textarea{
     }
 
     .skills-box img{
-        width: 63px;
+        width: 60px;
     }
     
     .skill-description{
@@ -796,5 +803,26 @@ textarea{
         color: whitesmoke;
         font-family: 'Raleway', sans-serif;
     }
+    
+    .portfolio h1{
+        font-size: 33px;
+    }
+
+    .portfolio div{
+        width: 100%;
+    }
+
+    .portfolio p{
+        font-size: 16px;
+    }
+
+    .portfolio img{
+        width: 70%;
+    }
+
+    .portfolio{
+        margin-bottom: 200px;
+    }
+
     
 }
