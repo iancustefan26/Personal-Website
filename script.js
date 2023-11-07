@@ -1,4 +1,5 @@
 ///The continue texting
+
 new Typed(".multiple-text", {
     strings: ["Software Developer.", "Computer Science Student."],
     typeSpeed: 100,
@@ -166,7 +167,7 @@ function startSkillsAnimation() {
     title.style.animation = "slideTop 3s ease forwards";
   });
   skillPhar.forEach(phar => {
-    phar.style.animation = "slideBottom 3s ease forwards";
+    phar.style.animation = "slideBottom 5s ease forwards";
   });
 }
 
@@ -521,7 +522,9 @@ window.addEventListener("scroll", animateContactSection);
 function scrollToTop(){
   window.scrollTo({
     top: 0, 
-    behavior: 'smooth'
+    behavior: 'smooth',
+    strat: 'block',
+    inline: 'nearest'
   });
 }
 

@@ -4,6 +4,12 @@
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth !important; /* For Safari */
+  }
+
 .home img{
     margin-bottom: 20%;
     margin-left: 35%;
@@ -114,7 +120,7 @@ body{
     background-attachment: fixed;
     background-attachment: scroll;
     background-attachment: fixed;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', Verdana, Geneva, Tahoma, sans-serif;
     color: whitesmoke;
 }
 
@@ -218,7 +224,7 @@ body{
     font-weight: 700;
     font-size: 20px;
     color: whitesmoke;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', serif;
 }
 
 .text span{
@@ -392,6 +398,18 @@ body{
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 400;
+}
+
+
+.used-technologies h3{
+    font-size: 20px;
+}
+
+.used-technologies img{
+    width: 40px;
+    border: none;
+    display: inline-flex;
+    margin-left: 18px;
 }
 
 .container4{
@@ -675,7 +693,8 @@ textarea{
     }
     .home{
         margin-top: 0;
-        margin-left: 50px;
+        width: 100%;
+        margin-left: 0;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -703,6 +722,7 @@ textarea{
         cursor: pointer;
         right: 20px;
         top: 20px;
+        z-index: 101;
     }
 
     .header{
@@ -718,7 +738,9 @@ textarea{
         align-items: center;
         transition: all 1s;
         animation: slideBottom 1s ease forwards;
+        z-index: 102;
     }
+    
     .navbar a{
         margin-top: 50px;
         margin-left: 36%;
@@ -827,6 +849,10 @@ textarea{
 
     .portfolio img{
         width: 70%;
+    }
+
+    .used-technologies img{
+        width: 40px;
     }
 
     .portfolio{
