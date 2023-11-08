@@ -125,7 +125,7 @@ body{
 }
 
 .logo img{
-    width: 23%;
+    width: 19%;
 }
 
 .navbar{
@@ -717,6 +717,8 @@ textarea{
         position: absolute;
     }
     #menu{
+        margin-top: 20px;
+        width: 55px;
         display: block;
         position: absolute;
         cursor: pointer;
@@ -736,7 +738,7 @@ textarea{
         display: block;
         justify-content: center;
         align-items: center;
-        transition: all 1s;
+        transition: all 3s;
         animation: slideBottom 1s ease forwards;
         z-index: 102;
     }
