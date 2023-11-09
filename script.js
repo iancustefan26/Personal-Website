@@ -528,6 +528,6 @@ function scrollToTop(){
   });
 }
 
-const logoButton = document.getElementById('logo');
+const logoButton = document.getElementById('logoIMG');
 
 logoButton.addEventListener('click', scrollToTop);
