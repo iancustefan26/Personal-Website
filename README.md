@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio website. I'm Stefan-Teodor Iancu, a computer science student at Facultatea de Informatica in Iasi. This website serves as a showcase of my skills, projects, and a way to connect with me.
 
+<img width="550" alt="Screenshot 2023-11-09 at 21 30 50 2" src="https://github.com/iancustefan26/Personal-Website/assets/119697854/4f4a0052-1a51-4c3c-867a-611dfd7a7ae6">
+
 ## Sections
 
 ### Home
