@@ -29,7 +29,7 @@ Welcome to my personal portfolio website. I'm Stefan-Teodor Iancu, a computer sc
 
 - HTML5
 - CSS
-- JavaScript for backend
+- JavaScript
 - Some backend services like EmailJS
 - Utilized icons and images sourced from the internet
 - Exclusive design by Stefan-Teodor Iancu with all rights reserved
