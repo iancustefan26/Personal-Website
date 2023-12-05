@@ -13,6 +13,7 @@ menu.addEventListener('click', function(){
       header.style.animation = "slideBottom 2s ease forwards";
       isNav = true; 
     })
+    //salut
     else{
       nvLinks.forEach(link =>{
         link.style.display = 'none';
