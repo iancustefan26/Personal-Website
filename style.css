@@ -388,6 +388,7 @@ body{
     border: 1px solid aqua;
 }
 
+
 .portfolio a:hover{
     background: aqua;
     color: grey;
@@ -401,6 +402,7 @@ body{
 }
 
 
+
 .used-technologies h3{
     font-size: 20px;
 }
@@ -409,7 +411,7 @@ body{
     width: 40px;
     border: none;
     display: inline-flex;
-    margin-left: 18px;
+    margin-left: 20px;
 }
 
 .container4{
