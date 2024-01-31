@@ -292,12 +292,20 @@ body{
     color: rgb(54, 121, 245);
 }
 
+#assembly{
+    color:rgb(143, 50, 143);
+}
+
+#datas{
+    color: rgb(28, 231, 163);
+}
+
 #js{
     color: gold;
 }
 
 #cpp{
-    color: blue;
+    color: rgb(0, 132, 255);
 }
 
 #python1{
