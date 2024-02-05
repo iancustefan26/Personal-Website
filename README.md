@@ -11,7 +11,7 @@ My personal portfolio website is now live, showcasing my diverse projects, skill
  - CSS
  - HTML
 
-# [Visit my website](https://www.iancustefanteodor.com)
+# [Visit my website](https://iancustefanteodor.tech/)
 
 
 ## How to Run Locally
