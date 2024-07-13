@@ -366,6 +366,10 @@ body{
     font-weight: 600;
 }
 
+#end-to-end{
+    color: yellow;
+}
+
 .portfolio a{
     cursor: pointer;
     margin-top: 5%;
