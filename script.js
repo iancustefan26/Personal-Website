@@ -42,35 +42,31 @@ new Typed("#hello-world", {
 // Get all navigation links
 const navLinks = document.querySelectorAll('.navbar a');
 
-// Add click event listeners to each navigation link
 navLinks.forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
 
-        // Get the target section's ID from the href attribute
         const targetId = link.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
-            // Scroll to the target section smoothly
+
             window.scrollTo({
                 top: targetSection.offsetTop,
                 behavior: 'smooth'
             });
 
-            // Remove 'active' class from all navigation links
             navLinks.forEach(navLink => {
                 navLink.classList.remove('active');
             });
 
-            // Add 'active' class to the clicked navigation link
             link.classList.add('active');
         }
     });
 });
-///scrolling to the top when refreshing
+
 window.addEventListener('beforeunload', () => {
-  // Scroll to the top of the page
+
   window.scrollTo(0, 0);
 });
 
